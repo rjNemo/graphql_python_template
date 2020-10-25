@@ -1,4 +1,4 @@
-# Todo GraphQL
+# Python GraphQL API
 
 Python GraphQL API template application
 
