@@ -1,4 +1,5 @@
 import graphene
+import uvicorn
 from fastapi import FastAPI
 from starlette.graphql import GraphQLApp
 from starlette.middleware.cors import CORSMiddleware
@@ -19,3 +20,7 @@ app.add_middleware(
 app.add_route(
     "/", GraphQLApp(schema=graphene.Schema(query=TodoQuery, mutation=Mutations))
 )
+
+
+if __name__ == "__main__":
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)

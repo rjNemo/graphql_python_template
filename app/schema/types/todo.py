@@ -28,3 +28,11 @@ class ResponseField(graphene.ObjectType):
 
 class TodoResponseField(ResponseField):
     todo = graphene.Field(TodoType)
+
+
+class TodoListResponseField(ResponseField):
+    todos = graphene.Field(graphene.List(TodoType))
+
+
+class CreateTodoResponseField(ResponseField):
+    todo = graphene.Field(TodoType)
