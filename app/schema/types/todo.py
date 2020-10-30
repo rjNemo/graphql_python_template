@@ -1,5 +1,7 @@
 import graphene
 
+from app.schema.types.response import ResponseField
+
 
 class TodoType(graphene.ObjectType):
     """
@@ -19,11 +21,6 @@ class TodoInputType(graphene.InputObjectType):
     todo_id = graphene.String()
     title = graphene.String(default_value="")
     is_done = graphene.Boolean(default_value=False)
-
-
-class ResponseField(graphene.ObjectType):
-    is_success = graphene.Boolean(default_value=True)
-    error_message = graphene.String()
 
 
 class TodoResponseField(ResponseField):

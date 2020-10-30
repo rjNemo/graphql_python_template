@@ -4,7 +4,7 @@ from starlette.graphql import GraphQLApp
 from starlette.middleware.cors import CORSMiddleware
 
 from app.schema.mutations.mutations import Mutations
-from app.schema.queries.todo import TodoQuery
+from app.schema.queries.queries import Query
 
 origins = ["*"]
 methods = ["*"]
@@ -21,7 +21,7 @@ def create_app() -> FastAPI:
         allow_headers=headers,
     )
     app.add_route(
-        "/", GraphQLApp(schema=graphene.Schema(query=TodoQuery, mutation=Mutations))
+        "/", GraphQLApp(schema=graphene.Schema(query=Query, mutation=Mutations))
     )
 
     return app

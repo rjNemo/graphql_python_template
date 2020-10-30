@@ -1,7 +1,7 @@
 import graphene
 
 from app.schema.types.todo import TodoType
-from app.usecases.close_todo import close_todo
+from app.usecases.todo.close_todo import close_todo
 
 
 class CloseTodo(graphene.Mutation):
