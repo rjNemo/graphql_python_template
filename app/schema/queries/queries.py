@@ -1,8 +1,8 @@
 import graphene
 
-from app.schema.types.todo import TodoListResponseField, TodoResponseField
 from .todo import resolve_get_todo, resolve_list_todos
 from .user import resolve_list_users, resolve_get_user
+from ..types.todo import TodoListResponseField, TodoResponseField
 from ..types.user import UserListResponseField, UserResponseField
 
 
