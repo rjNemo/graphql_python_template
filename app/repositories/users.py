@@ -43,3 +43,9 @@ def remove_user(user_id: str) -> User:
 def add_todo_to_user(todo: Todo, user: User) -> bool:
     user.tasks.append(todo)
     return True
+
+
+def remove_todo_from_user(todo, user) -> bool:
+    index = user.tasks.index(todo)
+    user.tasks.pop(index)
+    return True
