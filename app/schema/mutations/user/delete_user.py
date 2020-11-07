@@ -1,7 +1,7 @@
 import graphene
 
 from app.schema.types.user import UserResponseField
-from app.usecases.user.delete_user import delete_user
+from app.usecases.user import delete_user
 
 
 class DeleteUser(graphene.Mutation):

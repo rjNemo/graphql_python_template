@@ -1,8 +1,10 @@
 from typing import List
 
-from app.models.user import User
+from app.models import Todo, User
 
-user_list: List[User] = [User("id", "Jane Doe"), User(username="John Doe")]
+jane = User("id", "Jane Doe")
+jane.tasks = [Todo(title="Test")]
+user_list: List[User] = [jane, User(username="John Doe")]
 
 
 def get_all_users() -> List[User]:
@@ -36,3 +38,8 @@ def remove_user(user_id: str) -> User:
     user = get_user_by_id(user_id)
     index = user_list.index(user)
     return user_list.pop(index)
+
+
+def add_todo_to_user(todo: Todo, user: User) -> bool:
+    user.tasks.append(todo)
+    return True

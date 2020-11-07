@@ -1,7 +1,7 @@
 import graphene
 
 from app.schema.types.user import UserResponseField
-from app.usecases.user.create_user import create_user
+from app.usecases.user import create_user
 
 
 class CreateUser(graphene.Mutation):

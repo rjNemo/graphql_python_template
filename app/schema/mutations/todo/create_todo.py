@@ -1,7 +1,7 @@
 import graphene
 
 from app.schema.types.todo import TodoResponseField
-from app.usecases import create_todo
+from app.usecases.todo import create_todo
 
 
 class CreateTodo(graphene.Mutation):

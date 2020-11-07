@@ -1,7 +1,12 @@
 import graphene
 
 from app.schema.mutations.todo import CreateTodo, DeleteTodo, CloseTodo, UpdateTodo
-from app.schema.mutations.user import CreateUser, UpdateUser, DeleteUser
+from app.schema.mutations.user import (
+    CreateUser,
+    UpdateUser,
+    DeleteUser,
+    AssignTodoToUser,
+)
 
 
 class Mutation(graphene.ObjectType):
@@ -14,3 +19,4 @@ class Mutation(graphene.ObjectType):
     create_user = CreateUser.Field()
     update_user = UpdateUser.Field()
     delete_user = DeleteUser.Field()
+    assign_todo_to_user = AssignTodoToUser.Field()

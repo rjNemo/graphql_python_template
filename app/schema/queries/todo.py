@@ -3,7 +3,7 @@ Defines the query and how to interact with
 """
 
 from app.schema.types.todo import TodoResponseField, TodoListResponseField
-from app.usecases import read_all_todos, read_todo_by_id
+from app.usecases.todo import read_all_todos, read_todo_by_id
 
 
 def resolve_list_todos(self, info) -> TodoListResponseField:

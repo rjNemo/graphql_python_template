@@ -2,7 +2,7 @@ import graphene
 
 from app.models.user import User
 from app.schema.types.user import UserInputType, UserResponseField
-from app.usecases.user.update_user import update_user
+from app.usecases.user import update_user
 
 
 class UpdateUser(graphene.Mutation):

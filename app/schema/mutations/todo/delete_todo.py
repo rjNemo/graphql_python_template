@@ -1,7 +1,7 @@
 import graphene
 
 from app.schema.types.todo import TodoResponseField
-from app.usecases import delete_todo
+from app.usecases.todo import delete_todo
 
 
 class DeleteTodo(graphene.Mutation):
