@@ -19,13 +19,11 @@ def add_user(username: str) -> User:
     return user
 
 
-def edit_user(user_id: str, data) -> User:
+def edit_user(user_id: str, data: dict) -> User:
     user = get_user_by_id(user_id)
 
-    if title := data.get("title"):
-        user.title = title
-    if is_done := data.get("is_done"):
-        user.is_done = is_done
+    if username := data.get("username"):
+        user.username = username
 
     return user
 

@@ -8,6 +8,11 @@ class UserType(graphene.ObjectType):
     username = graphene.String()
 
 
+class UserInputType(graphene.InputObjectType):
+    user_id = graphene.String()
+    username = graphene.String()
+
+
 class UserListResponseField(ResponseField):
     users = graphene.List(UserType)
 
