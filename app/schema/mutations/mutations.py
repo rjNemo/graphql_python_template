@@ -1,6 +1,14 @@
 import graphene
 
-from . import CreateTodo, DeleteTodo, UpdateTodo, CloseTodo, CreateUser, UpdateUser
+from . import (
+    CreateTodo,
+    DeleteTodo,
+    UpdateTodo,
+    CloseTodo,
+    CreateUser,
+    UpdateUser,
+    DeleteUser,
+)
 
 
 class Mutations(graphene.ObjectType):
@@ -12,3 +20,4 @@ class Mutations(graphene.ObjectType):
     # user
     create_user = CreateUser.Field()
     update_user = UpdateUser.Field()
+    delete_user = DeleteUser.Field()
