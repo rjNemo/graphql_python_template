@@ -1,6 +1,6 @@
 import graphene
 
-from app.schema.types.todo import TodoType
+from app.schema.types.todo import TodoResponseField
 from app.usecases import create_todo
 
 
@@ -8,8 +8,8 @@ class CreateTodo(graphene.Mutation):
     class Arguments:
         title = graphene.String(default_value="")
 
-    todo = graphene.Field(TodoType)
+    result = graphene.Field(TodoResponseField)
 
     def mutate(self, info, title: str):
         todo = create_todo(title)
-        return CreateTodo(todo=todo)
+        return CreateTodo(TodoResponseField(todo=todo))
