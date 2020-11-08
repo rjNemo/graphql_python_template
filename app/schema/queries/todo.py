@@ -2,7 +2,7 @@
 Defines the query and how to interact with
 """
 
-from app.schema.types.todo import TodoResponseField, TodoListResponseField
+from app.schema.types.todo import TodoListResponseField, TodoResponseField
 from app.usecases.todo import read_all_todos, read_todo_by_id
 
 

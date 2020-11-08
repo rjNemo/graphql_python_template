@@ -6,6 +6,8 @@ from app.usecases.user import update_user
 
 
 class UpdateUser(graphene.Mutation):
+    """Update user information"""
+
     class Arguments:
         user = UserInputType()
 

@@ -2,10 +2,7 @@ from uuid import uuid4
 
 
 class Todo:
-    def __init__(self,
-                 todo_id: str = None,
-                 title: str = '',
-                 is_done: bool = False):
+    def __init__(self, title: str, todo_id: str = None, is_done: bool = False):
         self.todo_id = todo_id or str(uuid4())
         self.title = title
         self.is_done = is_done

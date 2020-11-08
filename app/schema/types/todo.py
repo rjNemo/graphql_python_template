@@ -4,9 +4,7 @@ from app.schema.types.response import ResponseField
 
 
 class TodoType(graphene.ObjectType):
-    """
-    Query Object Type
-    """
+    """Todo Object Type"""
 
     todo_id = graphene.String()
     title = graphene.String(default_value="")
@@ -14,22 +12,26 @@ class TodoType(graphene.ObjectType):
 
 
 class TodoInputType(graphene.InputObjectType):
-    """
-    Mutation Input Object Type
-    """
+    """Todo Input Object"""
 
     todo_id = graphene.String()
     title = graphene.String(default_value="")
     is_done = graphene.Boolean(default_value=False)
 
 
-class TodoResponseField(ResponseField):
+class TodoResponseField(graphene.ObjectType):
+    """Todo response object"""
+
+    class Meta:
+        interfaces = (ResponseField,)
+
     todo = graphene.Field(TodoType)
 
 
-class TodoListResponseField(ResponseField):
+class TodoListResponseField(graphene.ObjectType):
+    """Todos list response object"""
+
+    class Meta:
+        interfaces = (ResponseField,)
+
     todos = graphene.Field(graphene.List(TodoType))
-
-
-class CreateTodoResponseField(ResponseField):
-    todo = graphene.Field(TodoType)

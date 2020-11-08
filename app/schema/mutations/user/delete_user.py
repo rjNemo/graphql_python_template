@@ -5,6 +5,8 @@ from app.usecases.user import delete_user
 
 
 class DeleteUser(graphene.Mutation):
+    """Unregister an existing user"""
+
     class Arguments:
         user_id = graphene.String(required=True)
 

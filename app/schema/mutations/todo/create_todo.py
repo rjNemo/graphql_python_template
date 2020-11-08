@@ -5,8 +5,10 @@ from app.usecases.todo import create_todo
 
 
 class CreateTodo(graphene.Mutation):
+    """Create a new task."""
+
     class Arguments:
-        title = graphene.String(default_value="")
+        title = graphene.String(required=True)
 
     result = graphene.Field(TodoResponseField)
 

@@ -1,12 +1,12 @@
 import graphene
 
-from app.schema.mutations.todo import CreateTodo, DeleteTodo, CloseTodo, UpdateTodo
+from app.schema.mutations.todo import CloseTodo, CreateTodo, DeleteTodo, UpdateTodo
 from app.schema.mutations.user import (
-    CreateUser,
-    UpdateUser,
-    DeleteUser,
     AssignTodoToUser,
+    CreateUser,
     DeassignTodoToUser,
+    DeleteUser,
+    UpdateUser,
 )
 
 

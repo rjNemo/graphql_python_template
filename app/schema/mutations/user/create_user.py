@@ -5,6 +5,8 @@ from app.usecases.user import create_user
 
 
 class CreateUser(graphene.Mutation):
+    """Register an user"""
+
     class Arguments:
         username = graphene.String()
 

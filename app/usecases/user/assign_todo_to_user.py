@@ -1,4 +1,4 @@
-from app.models import User, Todo
+from app.models import Todo, User
 from app.repositories.users import add_todo_to_user, remove_todo_from_user
 from app.usecases.todo import read_todo_by_id
 from app.usecases.user.read_user_by_id import read_user_by_id

@@ -3,8 +3,8 @@ from typing import List
 from app.models.todo import Todo
 
 todo_list: List[Todo] = [
-    Todo(title='First'),
-    Todo(todo_id="ec73296f-e108-46a3-bfb3-b4237cb072ba", title='Second')
+    Todo(title="First"),
+    Todo(todo_id="ec73296f-e108-46a3-bfb3-b4237cb072ba", title="Second"),
 ]
 
 

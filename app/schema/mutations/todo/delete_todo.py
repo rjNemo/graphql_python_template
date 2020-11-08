@@ -5,6 +5,8 @@ from app.usecases.todo import delete_todo
 
 
 class DeleteTodo(graphene.Mutation):
+    """Delete an existing task"""
+
     class Arguments:
         todo_id = graphene.String(required=True)
 

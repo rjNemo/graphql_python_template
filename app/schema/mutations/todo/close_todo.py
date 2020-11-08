@@ -5,6 +5,8 @@ from app.usecases.todo import close_todo
 
 
 class CloseTodo(graphene.Mutation):
+    """Close an existing task"""
+
     class Arguments:
         todo_id = graphene.String(required=True)
 

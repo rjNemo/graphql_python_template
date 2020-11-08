@@ -1,7 +1,7 @@
 from typing import Tuple
 
 from app.models.user import User
-from app.repositories.users import user_exists, remove_user
+from app.repositories.users import remove_user, user_exists
 
 
 def delete_user(user_id: str) -> Tuple[User, bool]:

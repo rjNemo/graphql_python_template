@@ -5,6 +5,8 @@ from app.usecases.user import assign_todo_to_user, deassign_todo_to_user
 
 
 class AssignTodoToUser(graphene.Mutation):
+    """Assign an existing task to an existing user"""
+
     class Arguments:
         todo_id = graphene.String()
         user_id = graphene.String()
@@ -21,6 +23,8 @@ class AssignTodoToUser(graphene.Mutation):
 
 
 class DeassignTodoToUser(graphene.Mutation):
+    """Deassign an existing task from an existing user"""
+
     class Arguments:
         todo_id = graphene.String()
         user_id = graphene.String()
