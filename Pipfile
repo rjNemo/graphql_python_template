@@ -7,10 +7,10 @@ verify_ssl = true
 black = "*"
 
 [packages]
-fastapi = "*"
-uvicorn = "*"
-graphene = "*"
-pydantic = "*"
+fastapi = "==0.65.1"
+uvicorn = "==0.13.4"
+graphene = "2.1.8"
+pydantic = "==1.8.2"
 
 [requires]
-python_version = "3.8"
+python_version = "3.9"
